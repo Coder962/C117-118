@@ -208,15 +208,12 @@
     transform-origin: -15vw -20vh;
     box-shadow: -40vmin 0 5.320272286925631vmin currentColor;
 }
-body {
-    color:white;
+body{
     font-family: 'Righteous', cursive;
-}
-p {
-    padding-top: 10px;
-    font-size:25px;
-}
-#show_sketch{
+    color:white;
+  }
+  
+  #show_sketch{
     background: #12c2e9;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -224,26 +221,39 @@ p {
     float:right;
     margin-right:50px;
 }
-#sketch_to_be_drawn,span{
-    font-family: 'Fruktur', cursive;
-}
-#sketch_to_be_drawn {
-    color:aliceblue;
-}
-span {
-    font-size:3rem;
-   color:lightgreen;
-}
+  
 #timer {
     float:right;
 margin-right:400px;
 }
-canvas {
-    border-radius:100% 0% 100% 0% / 29% 82% 18% 71% ;
-    animation-name:example;
-    animation-duration: 4s;
-    margin-top:50px;
-    animation-iteration-count: infinite;
-    display:block;
-    z-index:-1;
+  
+#score {
+    margin-left:400px;
 }
+  #sketch_to_be_drawn{
+    color: red;
+  }
+  
+  canvas 
+    {
+      border:2px solid white;
+      border-radius:20px;
+      margin-top:135px;
+      box-shadow:5px 5px 5px grey;
+      box-shadow: 1px 1px 38px #ffffff;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+  }
+  @keyframes example {
+  
+    from {box-shadow: 1px 1px 38px red;}
+    to {box-shadow: 1px 1px 38px green;}
+  
+  }
+  
+  p, span
+  {
+      padding-top:10px;
+      font-size:25px;
+  }
